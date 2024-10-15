@@ -17,11 +17,11 @@ def min_days_to_infect(grid):
         for c in range(cols):
             if grid[r][c] == 1:  # Zombie cell
                 queue.append((r, c, 0))  # (row, col, days)
-            elif grid[r][c] == 0:  # Empty cell
+            elif grid[r][c] == 0:  
                 empty_cells += 1
     
     if empty_cells == 0:
-        return 0  # No cells to infect
+        return 0 
     
     # Step 2: BFS to spread infection
     directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]  # Directions: right, down, left, up
